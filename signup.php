@@ -1,5 +1,5 @@
 <?php
-require('actions/signupAction.php');
+require('actions/users/signupAction.php');
 ?>
 
 <!DOCTYPE html>
