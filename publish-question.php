@@ -1,6 +1,6 @@
-<?php 
-    require('actions/questions/publishQuestionAction.php');
-    require('actions/users/securityAction.php'); 
+<?php
+require('actions/questions/publishQuestionAction.php');
+require('actions/users/securityAction.php');
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +10,7 @@
 <body>
     <?php require('includes/navbar.php'); ?>
 
-        <br><br>
-    <form class="container" method="POST">
+    <form class="container py-5" method="POST">
         <?php
         if (isset($errorMsg)) {
             echo '<p>' . $errorMsg . '</p>';

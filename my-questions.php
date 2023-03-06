@@ -1,6 +1,6 @@
 <?php
-require('actions/questions/myQuestionsAction.php');
 require('actions/users/securityAction.php');
+require('actions/questions/myQuestionsAction.php');
 
 ?>
 
@@ -22,7 +22,7 @@ require('actions/users/securityAction.php');
                 <div class="card-body">
                     <p class="card-text"><?= $question['description']; ?>.</p>
                     <a href="#" class="btn btn-primary">Voir la question</a>
-                    <a href="#" class="btn btn-outline-primary">Modifier la question</a>
+                    <a href="edit-question.php?id=<?=$question['id']; ?>" class="btn btn-outline-primary">Modifier la question</a>
                 </div>
             </div>
         </div>
