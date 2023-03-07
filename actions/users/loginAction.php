@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('actions/database.php');
 
 // validation du formulaire
@@ -44,3 +45,4 @@ if (isset($_POST['validate'])) {
         $errorMsg = 'Veuillez remplir tous les champs';
     }
 }
+?>
