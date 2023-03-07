@@ -26,12 +26,19 @@ require('actions/questions/showAllQuestionsAction.php');
         <?php
         while ($question = $getAllQuestions->fetch()) {
         ?>
+<<<<<<< HEAD
             <div class="py-2">
                 <div class="card">
                     <div class="card-header"><?= $question['titre']; ?></div>
                     <div class="card-body"><?= $question['description']; ?></div>
                     <div class="card-footer">Publié par <?= $question['pseudo_auteur']; ?>, le <?= $question['date_publication']; ?></div>
                 </div>
+=======
+            <div class="card py-2">
+                <div class="card-header"><?= $question['titre']; ?></div>
+                <div class="card-body"><?= $question['description']; ?></div>
+                <div class="card-footer">Publié par <?= $question['pseudo_auteur']; ?>, le <?= $question['date_publication']; ?></div>
+>>>>>>> recherche-questions
             </div>
         <?php
         }
