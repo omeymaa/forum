@@ -1,13 +1,14 @@
 <?php
+
 require('actions/database.php');
 
-// valider le formulaire
-if(isset($_POST['validate'])) {
+//Valider le formulaire
+if(isset($_POST['validate'])){
 
-    // verifier si les champs ne sont pas vides
-    if(!empty($_POST['title']) AND !empty($_POST['description']) AND !empty($_POST['content'])) {
+    //Vérifier si les champs ne sont pas vides
+    if(!empty($_POST['title']) AND !empty($_POST['description']) AND !empty($_POST['content'])){
         
-        // les donnees de la question, nl2br pour autoriser les sauts de ligne
+        //Les données de la question
         $question_title = htmlspecialchars($_POST['title']);
         $question_description = nl2br(htmlspecialchars($_POST['description']));
         $question_content = nl2br(htmlspecialchars($_POST['content']));
