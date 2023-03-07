@@ -15,9 +15,17 @@
         <li class="nav-item">
           <a class="nav-link" href="my-questions.php">Mes questions</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="actions/users/logoutAction.php">Déconnexion</a>
-        </li>
+        <?php
+        if (isset($_SESSION['auth'])) {
+        ?>
+          <li class="nav-item">
+            <a class="nav-link" href="actions/users/logoutAction.php">Déconnexion</a>
+          </li>
+        <?php
+        }
+
+        ?>
+
       </ul>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <?php 
-require('actions/users/securityAction.php'); 
+session_start();
 ?>
 
 <!DOCTYPE html>
