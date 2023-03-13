@@ -24,8 +24,8 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
         $question_publication_date = $questionsInfos['date_publication'];
 
     } else {
-        echo 'Aucune question n\'a été trouvée';
+        $errorMsg = 'Aucune question n\'a été trouvée';
     }
 } else {
-    echo 'Aucune question n\'a été trouvée';
+    $errorMsg = 'Aucune question n\'a été trouvée';
 }

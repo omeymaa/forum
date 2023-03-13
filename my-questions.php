@@ -17,11 +17,13 @@ require('actions/questions/myQuestionsAction.php');
         <div class="container py-3">
             <div class="card">
                 <div class="card-header">
-                    <?= $question['titre']; ?>
+                <a href="question.php?id=<?= $question['id']; ?>">
+                        <?= $question['titre']; ?>
+                    </a>
                 </div>
                 <div class="card-body">
                     <p class="card-text"><?= $question['description']; ?>.</p>
-                    <a href="#" class="btn btn-primary">Voir la question</a>
+                    <a href="question.php?id=<?= $question['id']; ?>" class="btn btn-primary">Voir la question</a>
                     <a href="edit-question.php?id=<?=$question['id']; ?>" class="btn btn-warning">Modifier la question</a>
                     <a href="actions/questions/deleteQuestionAction.php?id=<?= $question['id']; ?>" class="btn btn-danger">Supprimer la question</a>
                 </div>
