@@ -26,14 +26,14 @@ require('actions/questions/showAllQuestionsAction.php');
         <?php
         while ($question = $getAllQuestions->fetch()) {
         ?>
-            <div class="card py-2">
+            <div class="card mb-2">
                 <div class="card-header">
                     <a href="question.php?id=<?= $question['id']; ?>">
                         <?= $question['titre']; ?>
                     </a>
                 </div>
                 <div class="card-body"><?= $question['description']; ?></div>
-                <div class="card-footer">Publié par <?= $question['pseudo_auteur']; ?>, le <?= $question['date_publication']; ?></div>
+                <div class="card-footer">Publié par <a href="profile.php?id=<?= $question['id_auteur']?>"> <?= $question['pseudo_auteur']; ?></a>, le <?= $question['date_publication']; ?></div>
             </div>
         <?php
         }
