@@ -7,10 +7,11 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
 
     // recuperer l'identifiant de la question
     $idOfTheQuestion = $_GET['id'];
+
+    // verifier si la question existe
     $checkIfQuestionExists = $bdd->prepare('SELECT * FROM questions WHERE id=?');
     $checkIfQuestionExists->execute(array($idOfTheQuestion));
 
-    // verifier si la question existe
     if($checkIfQuestionExists->rowCount() > 0) {
 
         // recuperer toutes les datas de la question
